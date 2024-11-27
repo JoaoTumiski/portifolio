@@ -687,16 +687,17 @@ section.Contato .input:focus{
 
     section.Tech .flex .Web, 
     section.Tech .flex .Mobile {
-        gap: 20px; /* Ajuste o espaço entre os cards se necessário */
-        overflow-x: hidden; /* Ativa o scroll horizontal */
-        padding-bottom: 20px; /* Adiciona um pequeno espaçamento inferior, se necessário */
+        flex-direction: column;
+        gap: 20px;
     }
 
-    section.Tech .cards {
-        flex-shrink: 0;
+    section.Tech h1 {
+        justify-content: center;
+        text-align: center;
     }
 
     section.Projetos .mobile, .web{
+        margin-top: 0px;
         flex-direction: column;
         align-items: center;
     }
