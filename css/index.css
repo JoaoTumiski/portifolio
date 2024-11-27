@@ -1,0 +1,743 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background: linear-gradient(to right, transparent  60%, #7a00b4 40%)
+    ,url('../img/fundo.png');
+    mask-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    margin:0px;
+    padding: 0px;
+}
+
+h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 48px;
+}
+p{
+    font-family: 'Gotham';
+}
+
+section {
+    margin:0px;
+    padding: 0px;
+    border: none;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('./fontes/Gotham-Medium.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Fonte Light */
+@font-face {
+    font-family: 'Gotham';
+    src: url('./fontes/Gotham-Light.otf') format('otf');
+    font-weight: lighter; 
+    font-style: normal;
+}
+
+.menu-desk {
+    align-items: center;
+    font-family: "Gotham", sans-serif;
+    display: flex;
+    justify-content: end;
+    margin-right: 10%;
+    gap: 100px;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    padding: 10px 0;
+}
+
+.menu-desk ul{
+    list-style-type: none;
+    display: flex;
+    gap: 100px;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+}
+
+button {
+    font-size: 1.4em;
+    padding: 0.6em 0.8em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px #000000b4;
+  }
+  
+  .menu-desk .containerCnt {
+    position: relative;
+    margin-right: 180px;
+    padding: 3px;
+    background: linear-gradient(90deg, #03a9f4, #f441a5);
+    border-radius: 0.9em;
+    transition: all 0.4s ease;
+  }
+  
+  .menu-desk .containerCnt::before {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: 0.9em;
+    z-index: -10;
+    filter: blur(0);
+    transition: filter 0.4s ease;
+  }
+  
+  .menu-desk .containerCnt:hover::before {
+    background: linear-gradient(90deg, #03a9f4, #f441a5);
+    filter: blur(1.2em);
+  }
+  .menu-desk .containerCnt:active::before {
+    filter: blur(0.2em);
+  }
+
+
+
+  /* Topo site */
+.topo .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 15%;
+    margin-bottom: 80px;
+    
+}
+
+.topo p {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    text-align: justify;
+    color: white;
+    margin: 0;
+}
+
+.topo span{
+    font-size: 48px;
+    color: #7a00b4;
+}
+
+.topo .gothan {
+    font-size: 40px;
+    font-family: "Gotham"; 
+    font-weight: lighter;
+}
+
+.SaibaMais{
+    margin-top: 80px;
+    background-color: transparent;
+    box-shadow: #7a00b4 2px 2px 4px 4px;
+    color: white;
+}
+
+@keyframes levitate {
+    0%, 100% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+.topo .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: levitate 2s ease-in-out infinite;
+}
+
+.diamond {
+    width: 350px; 
+    height: 350px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: rotate(45deg);
+    box-shadow: 0px 15px 25px #03a9f4, 
+    0px 5px 10px #03a9f4;
+}
+
+.diamond img {
+    width: 200%;
+    height: 142%;
+    object-fit: cover; 
+    transform: rotate(-45deg);
+}
+
+
+.topo .Social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 90px;
+}
+
+.topo .Social .icon-content {
+    margin: 0 10px;
+    position: relative;
+}
+
+.topo .Social .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.topo .Social .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+    z-index: 1; 
+}
+
+.topo .Social .icon-content a:hover .filled {
+    height: 100%; 
+}
+
+.topo .Social .icon-content a:hover img {
+    filter: invert(1);
+}
+
+.topo .Social .icon-content a img {
+    position: relative;
+    z-index: 2; 
+    width: 30px;
+    height: 30px;
+    transition: filter 0.3s ease-in-out;
+}
+
+.topo .Social .icon-content .tooltip {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    background-color: #333;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.topo .Social .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: 60px;
+}
+
+.topo .icon-content a[data-social="linkedin"] .filled,
+.topo .icon-content a[data-social="linkedin"] ~ .tooltip {
+    background-color: #0274b3;
+}
+
+.topo .icon-content a[data-social="github"] .filled,
+.topo .icon-content a[data-social="github"] ~ .tooltip {
+    background-color: #24262a;
+}
+
+.topo .icon-content a[data-social="instagram"] .filled,
+.topo .icon-content a[data-social="instagram"] ~ .tooltip {
+    background: linear-gradient(
+        45deg,
+        #405de6,
+        #5b51db,
+        #b33ab4,
+        #c135b4,
+        #e1306c,
+        #fd1f1f
+    );
+}
+
+/* SOBRE MIM */
+
+section.Sobre-mim, section.Tech, section.Projetos, section.Contato {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+section.Sobre-mim .interface {
+    margin-bottom: 0;
+}
+
+section.Sobre-mim .flex {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+section.Sobre-mim video {
+    border-radius: 30px;
+    box-shadow: #7a00b4 10px 10px 10px 10px;
+}
+
+section.Sobre-mim h1 {
+    color: white;
+    font-weight: 500;
+    font-size: 48px;
+    font-variant: small-caps;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+section.Sobre-mim .txt {
+    color: white;
+    max-width: 450px;
+    font-size: 18px;
+    font-family: "Gotham"; 
+    font-weight: lighter;
+}
+
+/* TECNOLOGIAS */
+section.Tech .interface {
+    background-color: black;
+    padding: 20px 0;
+}
+
+section.Tech .flex {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 20px;
+}
+section.Tech .flex .Web , .Mobile{
+    display: flex;
+    gap: 100px;
+}
+
+section.Tech h1 {
+    margin: 60px;
+}
+
+section.Tech .cards {
+    margin: 0 auto;
+    background: transparent;
+    box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
+    position: relative;
+    width: 240px;
+    height: 330px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+  
+  .wave {
+    position: absolute;
+    width: 540px;
+    height: 700px;
+    opacity: 0.6;
+    left: 0;
+    top: 0;
+    margin-left: -50%;
+    margin-top: -70%;
+    background: linear-gradient(744deg,#af40ff,#5b42f3 60%,#00ddeb);
+  }
+  
+  .icon {
+    width: 3em;
+    margin-top: -1em;
+    padding-bottom: 1em;
+  }
+  
+  .infotop {
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    top: 5.6em;
+    left: 0;
+    right: 0;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+  }
+  
+  .description {
+    font-size: 14px;
+    font-weight: 100;
+    position: relative;
+    top: 1em;
+    margin: 10px;
+    text-transform: lowercase;
+  }
+  
+  .wave:nth-child(2),
+  .wave:nth-child(3) {
+    top: 210px;
+  }
+  
+  .playing .wave {
+    border-radius: 40%;
+    animation: wave 3000ms infinite linear;
+  }
+  
+  .wave {
+    border-radius: 40%;
+    animation: wave 55s infinite linear;
+  }
+  
+  .playing .wave:nth-child(2) {
+    animation-duration: 4000ms;
+  }
+  
+  .wave:nth-child(2) {
+    animation-duration: 50s;
+  }
+  
+  .playing .wave:nth-child(3) {
+    animation-duration: 5000ms;
+  }
+  
+  .wave:nth-child(3) {
+    animation-duration: 45s;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+/* PRINCIPAIS PROJETOS*/
+section.Projetos .flex{
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+section.Projetos .mobile, .web{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+section.Projetos .description{
+    max-width: 300px;
+}
+
+section.Projetos img{
+    width: 100%; 
+    max-height: 650px;
+    object-fit: cover; 
+    object-position: center;
+  }
+
+
+section.Projetos .carousel{
+    width: 400px;
+    height: 550px;
+  }
+
+  /*CONTATO*/
+
+section.Contato .flex{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 250px;
+}
+
+section.Contato p{
+    max-width: 500px;
+}
+
+
+section.Contato .input{
+    display: block;
+    width: 500px;
+    margin-top: 50px;
+    min-height: 50px;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right:none ;
+    color: white;
+}
+
+section.Contato .input:focus{
+    outline: none;
+    border-color: #7a00b4;
+    box-shadow: 0 0 5px #7a00b4;
+}
+
+#success-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+#success-modal div {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    border: 4px solid transparent;
+    border-top: 4px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+/*MENU MOBILE*/
+
+.btn-abrir-menu i{
+    font-size: 50px;
+    color: #6B00C2;
+    cursor: pointer;
+    display: none;
+}
+
+.btn-abrir-menu{
+    position: absolute; 
+    top: 10px;
+    right: 10px; 
+}
+
+.menu-mobile{
+    background-color: #303030f1;
+    height: 0%;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+    transition: .3s;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.menu-mobile.abrir-menu{
+    height: 40%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay{
+    display: block;
+}
+
+.menu-mobile nav{
+    top: 0;
+    height: 100%;
+}
+
+.menu-mobile nav a:hover {
+    color: #6B00C2; 
+    transform: perspective(1000px) translateZ(100px) rotateX(16deg) rotateY(16deg);
+}
+
+.menu-mobile ul {
+    list-style-type: none;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu-mobile nav a.active{
+    color: #6B00C2;
+   
+}
+
+.menu-mobile .btn-fechar i{
+    color: #6B00C2;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.menu-mobile .btn-fechar{
+    position: absolute; 
+    top: 10px;
+    right: 10px; 
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.486);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+@media screen and (max-width: 1050px) {
+
+    p {
+        font-size: 80%;
+    }
+    
+    .menu-desk{
+        display: none;
+    }
+
+    .btn-abrir-menu i{
+        display: flex;
+    }
+
+    .btn-abrir-menu{
+        background-color: #fff;
+        padding: 4px;
+        border-radius: 12px;
+    }
+
+    .container{
+        margin-top: 100px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .topo .flex{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .diamond {
+        width: 200px; 
+        height: 200px; 
+        margin-top: 100px;
+    }
+
+
+    section.Sobre-mim p{
+        font-size: 16px;
+    }
+
+    section.Sobre-mim .flex {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 40px;
+    }
+
+    section.Sobre-mim video{
+        height: 70%;
+        width: 70%;
+    }
+
+    section.Sobre-mim .video{
+        display: flex;
+        justify-content: center;
+    }
+
+    section.Tech .flex .Web, 
+    section.Tech .flex .Mobile {
+        gap: 20px; /* Ajuste o espaço entre os cards se necessário */
+        overflow-x: hidden; /* Ativa o scroll horizontal */
+        padding-bottom: 20px; /* Adiciona um pequeno espaçamento inferior, se necessário */
+    }
+
+    section.Tech .cards {
+        flex-shrink: 0;
+    }
+
+    section.Projetos .mobile, .web{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.Projetos .web .carousel{
+        width: 300px;
+        height: 250px;
+
+    }
+
+    section.Projetos .carousel{
+        width: 250px;
+        height: 400px;
+      }
+
+      section.Projetos button{
+        margin-bottom: 10px;
+      }
+
+      section.Contato .flex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 120px 40px 40px 40px
+      }
+
+      section.Contato .input{
+        width: 100%;
+        margin-top: 50px;
+        min-height: 50px;
+        background-color: transparent;
+        border-top: none;
+        border-left: none;
+        border-right:none ;
+        color: white;
+      }
+
+      section.Contato .Form{
+        display: flex;
+        flex-direction: column;
+        min-width: 100%;
+      }
+
+}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+        <div class="menu-desk">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#Home" class="active"> Home</a>
+                    </li>
+        
+                    <li>
+                        <a href="#Sobre-mim">Sobre mim</a>
+                    </li>
+        
+                    <li>
+                        <a href="#tecnologias">Tech</a>
+                    </li>
+        
+                    <li>
+                        <a href="#projetos">Projetos</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="containerCnt">
+                <button class="button" onclick="location.href='#contato'">Contato</button>
+            </div>
+            
+        </div>
+    </header>
+  </div>
+
+    <section id="Home" class="topo">
+        <div class="flex">
+            <div class="text">
+                <p>Olá, me chamo
+                <p><span>João Tumiski</span></p>
+                <h4></h4>
+                <p class="gothan">Desenvolvedor WEB</p>
+                <p class="gothan">& Mobile</p></p>
+
+                <button class="SaibaMais"  onclick="location.href='#Sobre-mim'" >Saiba mais</button>
+            </div>
+              
+            <div class="interface">
+                <div class="container">
+                    <div class="diamond">
+                        <img src="./img/perfil.jpg" alt="perfil">
+                    </div>
+                </div>
+                <ul class="Social">
+                    <li class="icon-content">
+                        <a href="https://www.linkedin.com/in/joão-tumiski-63063b265/" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        aria-label="LinkedIn" 
+                        data-social="linkedin">
+                         <div class="filled"></div>
+                         <img src="./img/linkedin.svg" alt="LinkedIn">
+                     </a>
+
+                      <div class="tooltip">LinkedIn</div>
+                    </li>
+                    <li class="icon-content">
+                      <a href="https://github.com/JoaoTumiski" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      aria-label="GitHub" 
+                      data-social="github">
+                        <div class="filled"></div>
+                        <img src="./img/github.svg" alt="github">
+                      </a>
+                      <div class="tooltip">GitHub</div>
+                    </li>
+                    <li class="icon-content">
+                      <a
+                        href="https://www.instagram.com/joao.tumiski/"
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        aria-label="Instagram"
+                        data-social="instagram"
+                      >
+                        <div class="filled"></div>
+                        <img src="./img/instagram.svg" alt="instagram" class="bi">
+                      </a>
+                      <div class="tooltip">Instagram</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section> 
+    
+    <section id="Sobre-mim" class="Sobre-mim">
+        <div class="interface">
+            <div class="flex">
+                <div class="video">
+                    <video width="360" height="640" muted autoplay loop controls>
+                        <source src="./img/video.mp4" type="video/mp4">
+                        Seu navegador não suporta a tag de vídeo.
+                    </video>
+                </div>
+                <div class="txt">
+                    <h1>Sobre mim</h1>
+                    <p>Sou desenvolvedor Android em Kotlin, com experiência em projetos pessoais. Meu foco é o desenvolvimento mobile, mas também estou explorando o desenvolvimento WEB para ampliar meus conhecimentos. Ainda assim, tenho mais experiência e confiança na área mobile.</p>
+                    <p>Sempre gostei de aprender coisas novas e encarar desafios, transformando minha curiosidade inicial pela programação em uma verdadeira paixão.</p>
+                    <p>Meu primeiro contato com programação foi movido por curiosidade. Hoje, essa curiosidade se transformou em paixão, e amo o que faço.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tecnologias" class="Tech">
+        <div class="interface">
+            <div class="flex">
+                <h1 style="color: white;">Tecnologias WEB</h1>
+                <div id="cardsWeb-container" class="Web"></div> <!-- Container para as tecnologias web -->
+                <h1 style="color: white;">Tecnologias Mobile</h1>
+                <div id="cardsMobile-container" class="Mobile"></div> <!-- Container para as tecnologias mobile -->
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="Projetos">
+        <div class="interface">
+            <div class="flex">
+                <div class="mobile">
+                    <div class="carousel">
+                        <div id="carouselMobileIndicators" data-interval="false" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                              <li data-target="#carouselMobileIndicators" data-slide-to="0" class="active"></li>
+                              <li data-target="#carouselMobileIndicators" data-slide-to="1"></li>
+                              <li data-target="#carouselMobileIndicators" data-slide-to="2"></li>
+                              <li data-target="#carouselMobileIndicators" data-slide-to="3"></li>
+                              <li data-target="#carouselMobileIndicators" data-slide-to="4"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img class="d-block w-100" src="./img/orole mockup.png" alt="Primeiro Slide" style="filter: drop-shadow(10px 10px 10px #7a00b4);">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="./img/parceiros mockup.png" alt="Segundo Slide" style="filter: drop-shadow(10px 10px 10px #7a00b4);">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="./img/clima mockup.png" alt="Terceiro Slide" style="filter: drop-shadow(10px 10px 10px #7a00b4);">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="./img/underconectMockup.png" alt="quarto Slide" style="filter: drop-shadow(10px 10px 10px #7a00b4);">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="./img/underfest mockup.png" alt="quinto Slide" style="filter: drop-shadow(10px 10px 10px #7a00b4);">
+                              </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselMobileIndicators" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Anterior</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselMobileIndicators" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Próximo</span>
+                            </a>
+                          </div>
+                    </div>
+                    <div class="text">
+                        <h1 style="color: white;">Projetos Mobile</h1>
+                        <h1 style="color: white; font-size: xx-large;" id="Title"></h1>
+                        <div class="description">
+                            <p id="DescriptionMobile" style="color: white; font-size: 18px;"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="web">
+                    <div class="carousel">
+                        <div id="carouselWebIndicators" data-interval="false" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                              <li data-target="#carouselWebIndicators" data-slide-to="0" class="active"></li>
+                              <li data-target="#carouselWebIndicators" data-slide-to="1"></li>
+                              <li data-target="#carouselWebIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img class="d-block w-100" src="./img/oroleweb mockup.png" alt="Primeiro SlideWeb" style="filter: drop-shadow(10px 10px 10px #7a00b4);">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="./img/jogodavelha mockup.png" alt="Segundo SlideWeb" style="filter: drop-shadow(10px 10px 10px #7a00b4);">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="./img/portifólio mockup.png" alt="Terceiro SlideWeb" style="filter: drop-shadow(10px 10px 10px #7a00b4);">
+                              </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselWebIndicators" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Anterior</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselWebIndicators" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Próximo</span>
+                            </a>
+                          </div>
+                    </div>
+                    <div class="text">
+                        <h1 style="color: white;">Projetos Web</h1>
+                        <h1 style="color: white; font-size: xx-large;" id="TitleWEB"></h1>
+                        <div class="description">
+                            <p id="DescriptionWEb" style="color: white; font-size: 18px;"></p>
+                        </div>
+                        <button id="VerWEB" class="SaibaMais">Ver Projeto</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="Contato">
+      <div class="interface">
+          <div class="flex">
+              <h1 style="color: white;">Contato</h1>
+              <p style="color: white;">Se você tem uma ideia interessante, um projeto em mente ou simplesmente gostaria de trocar ideias, ficarei muito feliz em ouvir! Entre em contato e vamos conversar. Juntos, podemos transformar boas ideias em realidade.</p>
+              <div class="Form">
+                  <form class="formulario" id="contact-form" action="https://formsubmit.co/e21d2f109e3ba0068d9f77ddffe66692" method="POST">
+                      <input placeholder="Name" type="text" name="name" class="input" required>
+                      <input placeholder="Email" id="mail" type="email" name="email" class="input" required>
+                      <textarea placeholder="Mensagem" rows="10" cols="30" id="message" name="message" class="input" required></textarea>
+                      <button type="submit" class="SaibaMais" style="width: 100%;">Enviar</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+
+      <div id="loading" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center;">
+        <div style="text-align: center; color: white;">
+            <div class="spinner" style="margin-bottom: 10px; border: 4px solid transparent; border-top: 4px solid white; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite;"></div>
+            <p>Enviando...</p>
+        </div>
+    </div>
+    
+  
+      <!-- Modal -->
+      <div id="success-modal">
+          <div>
+              <h2>Mensagem enviada!</h2>
+              <p>Obrigado por entrar em contato. Em breve, retornarei sua mensagem.</p>
+              <button onclick="closeModal()">Fechar</button>
+          </div>
+      </div>
+  </section>
+  
+  
+  
+
+    <script src="index.js"></script>
+</body>
+</html>
